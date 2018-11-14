@@ -1,0 +1,530 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/API Configurations/End Point/APIHelper.swift",
+      "line": 30,
+      "symbol": "APIHelper.getPlistDictonary(plistResource:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/API Configurations/End Point/APIHelper.swift",
+      "line": 38,
+      "symbol": "APIHelper.getPlistValueFromDict(plistResource:key:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/API Configurations/Logger.swift",
+      "line": 11,
+      "symbol": "Logger",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/API Configurations/Logger.swift",
+      "line": 13,
+      "symbol": "Logger.log(request:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/API Configurations/Logger.swift",
+      "line": 41,
+      "symbol": "Logger.log(response:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/API Configurations/Logger.swift",
+      "line": 49,
+      "symbol": "Logger.log(error:errorMessage:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/API Configurations/Logger.swift",
+      "line": 58,
+      "symbol": "Logger.log(message:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/API Configurations/Logger.swift",
+      "line": 62,
+      "symbol": "Logger.updateViewAndPrint(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/API Configurations/Request.swift",
+      "line": 20,
+      "symbol": "HTTPMethod.post",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/API Configurations/Request.swift",
+      "line": 21,
+      "symbol": "HTTPMethod.get",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/API Configurations/Request.swift",
+      "line": 28,
+      "symbol": "DataTask.request",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/API Configurations/Request.swift",
+      "line": 30,
+      "symbol": "DataTask.requestParameters",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/API Configurations/Request.swift",
+      "line": 34,
+      "symbol": "DataTask.requestParametersAndHeaders",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/API Configurations/Request.swift",
+      "line": 44,
+      "symbol": "ParameterEncoder.encode(urlRequest:with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/API Configurations/Request.swift",
+      "line": 61,
+      "symbol": "ParameterEncoding.encode(urlRequest:bodyParameters:urlParameters:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/API Configurations/Request.swift",
+      "line": 93,
+      "symbol": "URLParameterEncoder.encode(urlRequest:with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/API Configurations/Request.swift",
+      "line": 123,
+      "symbol": "JSONParameterEncoder.encode(urlRequest:with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/AppDelegate.swift",
+      "line": 12,
+      "symbol": "AppDelegate",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/AppDelegate.swift",
+      "line": 14,
+      "symbol": "AppDelegate.window",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/AppDelegate.swift",
+      "line": 17,
+      "symbol": "AppDelegate.application(_:didFinishLaunchingWithOptions:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/AppDelegate.swift",
+      "line": 26,
+      "symbol": "AppDelegate.applicationWillResignActive(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/AppDelegate.swift",
+      "line": 31,
+      "symbol": "AppDelegate.applicationDidEnterBackground(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/AppDelegate.swift",
+      "line": 36,
+      "symbol": "AppDelegate.applicationWillEnterForeground(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/AppDelegate.swift",
+      "line": 40,
+      "symbol": "AppDelegate.applicationDidBecomeActive(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/AppDelegate.swift",
+      "line": 44,
+      "symbol": "AppDelegate.applicationWillTerminate(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/Model/CourseModel.swift",
+      "line": 15,
+      "symbol": "CourseModel.id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/Model/CourseModel.swift",
+      "line": 16,
+      "symbol": "CourseModel.imageUrl",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/Model/CourseModel.swift",
+      "line": 17,
+      "symbol": "CourseModel.link",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/Model/CourseModel.swift",
+      "line": 18,
+      "symbol": "CourseModel.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/Model/CourseModel.swift",
+      "line": 19,
+      "symbol": "CourseModel.number_of_lessons",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/Model/HackerNewsModel.swift",
+      "line": 15,
+      "symbol": "HackerNewsModel.id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/Model/HackerNewsModel.swift",
+      "line": 16,
+      "symbol": "HackerNewsModel.descendants",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/Model/HackerNewsModel.swift",
+      "line": 17,
+      "symbol": "HackerNewsModel.by",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/Model/HackerNewsModel.swift",
+      "line": 18,
+      "symbol": "HackerNewsModel.score",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/Model/HackerNewsModel.swift",
+      "line": 19,
+      "symbol": "HackerNewsModel.text",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/Model/HackerNewsModel.swift",
+      "line": 20,
+      "symbol": "HackerNewsModel.title",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/Model/HackerNewsModel.swift",
+      "line": 21,
+      "symbol": "HackerNewsModel.type",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/Model/HackerNewsModel.swift",
+      "line": 22,
+      "symbol": "HackerNewsModel.url",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/Model/MockModel.swift",
+      "line": 15,
+      "symbol": "MockModel.id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/Model/MockModel.swift",
+      "line": 16,
+      "symbol": "MockModel.descendants",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/Model/MockModel.swift",
+      "line": 17,
+      "symbol": "MockModel.by",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/Model/MockModel.swift",
+      "line": 18,
+      "symbol": "MockModel.score",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/Model/MockModel.swift",
+      "line": 19,
+      "symbol": "MockModel.text",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/Model/MockModel.swift",
+      "line": 20,
+      "symbol": "MockModel.title",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/Model/MockModel.swift",
+      "line": 21,
+      "symbol": "MockModel.type",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/Model/MockModel.swift",
+      "line": 22,
+      "symbol": "MockModel.url",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/NetworkManager.swift",
+      "line": 37,
+      "symbol": "ResponseMessages.success",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/NetworkManager.swift",
+      "line": 38,
+      "symbol": "ResponseMessages.authenticationError",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/NetworkManager.swift",
+      "line": 39,
+      "symbol": "ResponseMessages.badRequest",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/NetworkManager.swift",
+      "line": 40,
+      "symbol": "ResponseMessages.serverError",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/NetworkManager.swift",
+      "line": 41,
+      "symbol": "ResponseMessages.outdated",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/NetworkManager.swift",
+      "line": 42,
+      "symbol": "ResponseMessages.failed",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/NetworkManager.swift",
+      "line": 43,
+      "symbol": "ResponseMessages.noData",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/NetworkManager.swift",
+      "line": 44,
+      "symbol": "ResponseMessages.unableToDecode",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/NetworkManager.swift",
+      "line": 45,
+      "symbol": "ResponseMessages.parametersNil",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/NetworkManager.swift",
+      "line": 46,
+      "symbol": "ResponseMessages.encodingFailed",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/NetworkManager.swift",
+      "line": 47,
+      "symbol": "ResponseMessages.missingURL",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/Presenter/HomePresenter.swift",
+      "line": 16,
+      "symbol": "HomePresenterDelegate.updateView()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/Presenter/HomePresenter.swift",
+      "line": 19,
+      "symbol": "HomePresenter",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/Presenter/HomePresenter.swift",
+      "line": 21,
+      "symbol": "HomePresenter.delegate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/Presenter/HomePresenter.swift",
+      "line": 22,
+      "symbol": "HomePresenter.networkManager",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/Presenter/HomePresenter.swift",
+      "line": 24,
+      "symbol": "HomePresenter.text",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/Presenter/HomePresenter.swift",
+      "line": 25,
+      "symbol": "HomePresenter.attributedText",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/Presenter/HomePresenter.swift",
+      "line": 27,
+      "symbol": "HomePresenter.init(delegate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/Presenter/HomePresenter.swift",
+      "line": 32,
+      "symbol": "HomePresenter.getHomeScreenData()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/Presenter/HomePresenter.swift",
+      "line": 47,
+      "symbol": "HomePresenter.cancelRequests()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/Presenter/HomePresenter.swift",
+      "line": 51,
+      "symbol": "HomePresenter.updateView(notification:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/View/HomeViewController.swift",
+      "line": null,
+      "symbol": "HomeViewController",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/View/HomeViewController.swift",
+      "line": 11,
+      "symbol": "HomeViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/View/HomeViewController.swift",
+      "line": 13,
+      "symbol": "HomeViewController.homePresenter",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/View/HomeViewController.swift",
+      "line": 15,
+      "symbol": "HomeViewController.textView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/View/HomeViewController.swift",
+      "line": 17,
+      "symbol": "HomeViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/View/HomeViewController.swift",
+      "line": 25,
+      "symbol": "HomeViewController.didReceiveMemoryWarning()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/View/HomeViewController.swift",
+      "line": 30,
+      "symbol": "HomeViewController.didTapCancelButton(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ashs/Desktop/Coviam-NL/Coviam-NL/View/HomeViewController.swift",
+      "line": 48,
+      "symbol": "HomeViewController.updateView()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/ashs/Desktop/Coviam-NL"
+}

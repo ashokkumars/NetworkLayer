@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NetworkManager Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/NetworkManager" class="dashAnchor"></a>
+    <a title="NetworkManager Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (44% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        NetworkManager Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/APIHelper.html">APIHelper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AppDelegate.html">AppDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CourseModel.html">CourseModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HackerNewsModel.html">HackerNewsModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HomePresenter.html">HomePresenter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HomeViewController.html">HomeViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Logger.html">Logger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MockModel.html">MockModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NetworkManager.html">NetworkManager</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/API.html">API</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/DataTask.html">DataTask</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/HTTPMethod.html">HTTPMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ParameterEncoding.html">ParameterEncoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ResponseMessages.html">ResponseMessages</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Result.html">Result</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/EndPointConfiguration.html">EndPointConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/HomePresenterDelegate.html">HomePresenterDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/NetworkRouterProtocol.html">NetworkRouterProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ParameterEncoder.html">ParameterEncoder</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/JSONParameterEncoder.html">JSONParameterEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/URLParameterEncoder.html">URLParameterEncoder</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9Coviam_NL11HTTPHeadersa">HTTPHeaders</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9Coviam_NL10Parametersa">Parameters</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>NetworkManager</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">NetworkManager</span><span class="o">&lt;</span><span class="kt">EndPoint</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/NetworkRouterProtocol.html">NetworkRouterProtocol</a></span> <span class="k">where</span> <span class="kt">EndPoint</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/EndPointConfiguration.html">EndPointConfiguration</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>The Network Manager class is responsible for making a Request to the given EndPoint. The class also decides whether to hit the API to get the data or to get the data from the local cache.</p>
+
+<ol>
+<li>This class is responsible for all network related operations.</li>
+<li>The completion of the class method is the Generic model(s) or error</li>
+<li>The calling class method should take care of downcasting the Generic model to a specific model it expects for.</li>
+</ol>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Coviam_NL14NetworkManagerC8dataTask33_D3BA5A1EE18D0AA5412BA8A994C741ECLLSo014URLSessionDataF0CSgvp"></a>
+                    <a name="//apple_ref/swift/Property/dataTask" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Coviam_NL14NetworkManagerC8dataTask33_D3BA5A1EE18D0AA5412BA8A994C741ECLLSo014URLSessionDataF0CSgvp">dataTask</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The dataTask what the -request(_:urlRequest:shouldCache:cacheDuration:completion:) is creating. This variable is used to cancel the particular task as well.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">private</span> <span class="k">var</span> <span class="nv">dataTask</span><span class="p">:</span> <span class="kt">URLSessionDataTask</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Coviam_NL14NetworkManagerC5cache33_D3BA5A1EE18D0AA5412BA8A994C741ECLLSo8URLCacheCvp"></a>
+                    <a name="//apple_ref/swift/Property/cache" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Coviam_NL14NetworkManagerC5cache33_D3BA5A1EE18D0AA5412BA8A994C741ECLLSo8URLCacheCvp">cache</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The shared Cache. It uses the default properties for now. The Cache can be extended based on the requirements to support the cache size and cache policy</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">private</span> <span class="k">var</span> <span class="nv">cache</span><span class="p">:</span> <span class="kt">URLCache</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Coviam_NL14NetworkManagerC10urlRequest10Foundation10URLRequestVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/urlRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Coviam_NL14NetworkManagerC10urlRequest10Foundation10URLRequestVSgvp">urlRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This variable can be used by the third party frameworks&rsquo; dependency Injection which has the request with them and wanted to execute the request through Network Manager</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">urlRequest</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Coviam_NL14NetworkManagerC7requestyx_Sb11shouldCacheSd13cacheDurationyqd__Sg_SSSgtc10completionts9DecodableRd__lF"></a>
+                    <a name="//apple_ref/swift/Method/request(_:shouldCache:cacheDuration:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Coviam_NL14NetworkManagerC7requestyx_Sb11shouldCacheSd13cacheDurationyqd__Sg_SSSgtc10completionts9DecodableRd__lF">request(_:shouldCache:cacheDuration:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The request method, which first checks whether the request is redundant. If there is already request in progress, the new request will be blocked.</p>
+
+<p>If the request is not redundant, the next check is, whether to fetch the data from the Cache or from the Origin source. If Cache is not set or expired, the API hit will be made to the Origin source and the data will be supplied as a Generic model. If the Cache is not expired, the data will be supplied from the local Cache.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">request</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt">Decodable</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">route</span><span class="p">:</span> <span class="kt">EndPoint</span><span class="p">,</span> <span class="nv">shouldCache</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="nv">cacheDuration</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">T</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="p">())</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>route</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The EndPoint (which confirms to the EndPointConfiguration protocol). From this EndPoint, all the request related parameters can be retrieved</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>shouldCache</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A boolean which indicates whether the response to be cached locally or not. The default value is set to false. If this parameter is not set by the calling class, the response will not be cached.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cacheDuration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>If the response need to be cached, how long the cache is valid? If the cacheDuration value is not passed, everytime the request will be hitting the origin to fetch the data. Unit of the cacheDuration is in seconds</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A completion block with the Generic model and the error (if any). Both are options fields</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Coviam_NL14NetworkManagerC21cacheResponseIfNeeded33_D3BA5A1EE18D0AA5412BA8A994C741ECLLySo11URLResponseCSg_10Foundation4DataVSgAI10URLRequestVSbSdtF"></a>
+                    <a name="//apple_ref/swift/Method/cacheResponseIfNeeded(_:_:_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Coviam_NL14NetworkManagerC21cacheResponseIfNeeded33_D3BA5A1EE18D0AA5412BA8A994C741ECLLySo11URLResponseCSg_10Foundation4DataVSgAI10URLRequestVSbSdtF">cacheResponseIfNeeded(_:_:_:_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The method caches the response in the local cache or in-memory based on the following keys</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">fileprivate</span> <span class="kd">func</span> <span class="nf">cacheResponseIfNeeded</span><span class="p">(</span><span class="n">_</span> <span class="nv">response</span><span class="p">:</span> <span class="kt">URLResponse</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">request</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="p">,</span> <span class="n">_</span> <span class="nv">shouldCache</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">_</span> <span class="nv">cacheDuration</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>response</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The response to be cached locally for the future use</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>data</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The data which will have the actual expected data. With the response, the data should also be captured.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>request</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The request to which the response and data to be cached. This is the unique key among the multiple local cache data.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>shouldCache</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A boolean which indicates whether the response to be cached locally or not. The default value is set to false. If this parameter is false, the response will not be cached. This method does nothing if the shouldCache parameter is false</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cacheDuration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>If the response need to be cached, how long the cache is valid? This cacheDuration is added to the response header as an Expiry Cache-Control.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Coviam_NL14NetworkManagerC21addCacheControlHeader33_D3BA5A1EE18D0AA5412BA8A994C741ECLLySo11URLResponseCSg_SdAHztF"></a>
+                    <a name="//apple_ref/swift/Method/addCacheControlHeader(_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Coviam_NL14NetworkManagerC21addCacheControlHeader33_D3BA5A1EE18D0AA5412BA8A994C741ECLLySo11URLResponseCSg_SdAHztF">addCacheControlHeader(_:_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method adds the custom expiry time to the response header when caching it locally</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">fileprivate</span> <span class="kd">func</span> <span class="nf">addCacheControlHeader</span><span class="p">(</span><span class="n">_</span> <span class="nv">response</span><span class="p">:</span> <span class="kt">URLResponse</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">cacheDuration</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">,</span> <span class="n">_</span> <span class="nv">modifiedReponse</span><span class="p">:</span> <span class="k">inout</span> <span class="kt">URLResponse</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>response</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The response to be cached locally for the future use</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cacheDuration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>If the response need to be cached, how long the cache is valid? This cacheDuration is added to the response header as an Expiry Cache-Control. This duration is added to the current Date and set it as the Cache Expiry</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>modifiedReponse</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An <strong>inout</strong> parameter, which updates the response to be cached after setting the Expiry header</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Coviam_NL14NetworkManagerC9getModelsqd__Sg6models_SSSg5errort10Foundation4DataVSg4from_ts9DecodableRd__lF"></a>
+                    <a name="//apple_ref/swift/Method/getModels(from:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Coviam_NL14NetworkManagerC9getModelsqd__Sg6models_SSSg5errort10Foundation4DataVSg4from_ts9DecodableRd__lF">getModels(from:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The method which parses the data and supplies the Generic Data Model(s), which can be downcasted by the expected model(s) by the requesting methods of the API</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">getModels</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">from</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="nv">models</span><span class="p">:</span> <span class="kt">T</span><span class="p">?,</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">Decodable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>data</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The data (either from local Cache / from the origin source) which needs to be converted to the Generic model(s)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A tuple which consists of the Generic model(s) and the error (if any)</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Coviam_NL14NetworkManagerC06handleC8Response33_D3BA5A1EE18D0AA5412BA8A994C741ECLLAA6ResultOySSGSo15HTTPURLResponseCF"></a>
+                    <a name="//apple_ref/swift/Method/handleNetworkResponse(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Coviam_NL14NetworkManagerC06handleC8Response33_D3BA5A1EE18D0AA5412BA8A994C741ECLLAA6ResultOySSGSo15HTTPURLResponseCF">handleNetworkResponse(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A private method which check for the response status codes.</p>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    See Also: <code><a href="../Enums/Result.html">Result&lt;String&gt;</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">fileprivate</span> <span class="kd">func</span> <span class="nf">handleNetworkResponse</span><span class="p">(</span><span class="n">_</span> <span class="nv">response</span><span class="p">:</span> <span class="kt">HTTPURLResponse</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Enums/Result.html">Result</a></span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>response</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The HTTPURLResponse to which the check needs to be done.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The Result enum, which tells whether the response is success or a failure. If it is a failure, the failure reason is also passed back.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Coviam_NL14NetworkManagerC10getRequest33_D3BA5A1EE18D0AA5412BA8A994C741ECLL10Foundation10URLRequestVx4from_AHSg03urlF0tKF"></a>
+                    <a name="//apple_ref/swift/Method/getRequest(from:urlRequest:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Coviam_NL14NetworkManagerC10getRequest33_D3BA5A1EE18D0AA5412BA8A994C741ECLL10Foundation10URLRequestVx4from_AHSg03urlF0tKF">getRequest(from:urlRequest:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A private method which gives the URL request from the EndPoint. This method will return the URLRequest received from dependency injection if that is not nil.</p>
+
+<p>This method also takes care of adding the necessary headers for different types of requests</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>This method can also throw an error back. The calling method should catch and process the error (if thrown)</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">fileprivate</span> <span class="kd">func</span> <span class="nf">getRequest</span><span class="p">(</span><span class="n">from</span> <span class="nv">route</span><span class="p">:</span> <span class="kt">EndPoint</span><span class="p">,</span> <span class="nv">urlRequest</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="p">?)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">URLRequest</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>route</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The EndPoint details of an API to for the request.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>urlRequest</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The URLRequest received from the Third party / custom framework during dependency injection</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The URLRequest which will be used to hit the origin to retrieve the data or to retrieve the cached data from local.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Coviam_NL14NetworkManagerC19configureParameters33_D3BA5A1EE18D0AA5412BA8A994C741ECLLys10DictionaryVySSypGSg04bodyF0_AA17ParameterEncodingO0rT0AI03urlF010Foundation10URLRequestVz7requesttKF"></a>
+                    <a name="//apple_ref/swift/Method/configureParameters(bodyParameters:bodyEncoding:urlParameters:request:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Coviam_NL14NetworkManagerC19configureParameters33_D3BA5A1EE18D0AA5412BA8A994C741ECLLys10DictionaryVySSypGSg04bodyF0_AA17ParameterEncodingO0rT0AI03urlF010Foundation10URLRequestVz7requesttKF">configureParameters(bodyParameters:bodyEncoding:urlParameters:request:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method is responsible to configure the parameters to the request of interest.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>This method can also throw an error back. The calling method should catch and process the error (if thrown)</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">fileprivate</span> <span class="kd">func</span> <span class="nf">configureParameters</span><span class="p">(</span><span class="nv">bodyParameters</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:9Coviam_NL10Parametersa">Parameters</a></span><span class="p">?,</span>
+                                     <span class="nv">bodyEncoding</span><span class="p">:</span> <span class="kt"><a href="../Enums/ParameterEncoding.html">ParameterEncoding</a></span><span class="p">,</span>
+                                     <span class="nv">urlParameters</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:9Coviam_NL10Parametersa">Parameters</a></span><span class="p">?,</span>
+                                     <span class="nv">request</span><span class="p">:</span> <span class="k">inout</span> <span class="kt">URLRequest</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>bodyParameters</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Paramters to be included for the POST request.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>bodyEncoding</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The type of encoding to be used. This is of type enum -ParameterEncoding</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>urlParameters</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Url query parameters (if anything needs to be added)</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>request</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An <strong>inout</strong> URLRequest parameter which will modify and set the request back after adding the necessary parameters to the it</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Coviam_NL14NetworkManagerC20addAdditionalHeaders33_D3BA5A1EE18D0AA5412BA8A994C741ECLLys10DictionaryVyS2SGSg_10Foundation10URLRequestVz7requesttF"></a>
+                    <a name="//apple_ref/swift/Method/addAdditionalHeaders(_:request:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Coviam_NL14NetworkManagerC20addAdditionalHeaders33_D3BA5A1EE18D0AA5412BA8A994C741ECLLys10DictionaryVyS2SGSg_10Foundation10URLRequestVz7requesttF">addAdditionalHeaders(_:request:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method is responsible to add any additional headers to the request</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>This method can also throw an error back. The calling method should catch and process the error (if thrown)</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">fileprivate</span> <span class="kd">func</span> <span class="nf">addAdditionalHeaders</span><span class="p">(</span><span class="n">_</span> <span class="nv">additionalHeaders</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:9Coviam_NL11HTTPHeadersa">HTTPHeaders</a></span><span class="p">?,</span> <span class="nv">request</span><span class="p">:</span> <span class="k">inout</span> <span class="kt">URLRequest</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>additionalHeaders</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The additional HTTPHeaders to be added to the request</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>request</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An <strong>inout</strong> URLRequest parameter which will modify and set the request back after adding the necessary additional headers to the it</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Coviam_NL14NetworkManagerC20shouldBlockRedundantyx3api_ySbc10completiontF"></a>
+                    <a name="//apple_ref/swift/Method/shouldBlockRedundant(api:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Coviam_NL14NetworkManagerC20shouldBlockRedundantyx3api_ySbc10completiontF">shouldBlockRedundant(api:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method is used to check whether to allow a particular API request or not. The method takes all the running tasks and check whether the new request of interest is already in progress.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">shouldBlockRedundant</span><span class="p">(</span><span class="nv">api</span><span class="p">:</span> <span class="kt">EndPoint</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping(_ shouldBlock: Bool)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>api</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The EndPoint to which we need to call the API</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Passes a boolean back saying whether to block the new request or not.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Coviam_NL14NetworkManagerC17readDataFromCache10Foundation0F0VSgAE10URLRequestV10forRequest_Sb10shouldReadtF"></a>
+                    <a name="//apple_ref/swift/Method/readDataFromCache(forRequest:shouldRead:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Coviam_NL14NetworkManagerC17readDataFromCache10Foundation0F0VSgAE10URLRequestV10forRequest_Sb10shouldReadtF">readDataFromCache(forRequest:shouldRead:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Use this method to read the data from cache. If the caching is set to false, return nil data. Else see if the cache is not expired and return the data. If the cache is expired, return nil</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">readDataFromCache</span><span class="p">(</span><span class="n">forRequest</span> <span class="nv">request</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="p">,</span> <span class="nv">shouldRead</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Data</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>request</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The request to which we need to retrieve the data from local cache (if the cache is valid)</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>shouldRead</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Whether to retrieve the data from local cache or not</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The data (or nil) based on the above mentioned parameters</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Coviam_NL14NetworkManagerC6cancelyyF"></a>
+                    <a name="//apple_ref/swift/Method/cancel()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Coviam_NL14NetworkManagerC6cancelyyF">cancel()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method is used to cancel the current task which is initiated by the network manager.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">cancel</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Coviam_NL14NetworkManagerC17cancelAllRequestsyyF"></a>
+                    <a name="//apple_ref/swift/Method/cancelAllRequests()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Coviam_NL14NetworkManagerC17cancelAllRequestsyyF">cancelAllRequests()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method is used to cancel all the running and suspended tasks.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">cancelAllRequests</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-11-14)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

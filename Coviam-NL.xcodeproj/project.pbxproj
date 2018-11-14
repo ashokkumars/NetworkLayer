@@ -1,0 +1,689 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		572816962199C740000B3BC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572816952199C740000B3BC9 /* AppDelegate.swift */; };
+		5728169B2199C740000B3BC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 572816992199C740000B3BC9 /* Main.storyboard */; };
+		5728169D2199C742000B3BC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5728169C2199C742000B3BC9 /* Assets.xcassets */; };
+		572816A02199C742000B3BC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5728169E2199C742000B3BC9 /* LaunchScreen.storyboard */; };
+		572816AB2199C742000B3BC9 /* Coviam_NLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572816AA2199C742000B3BC9 /* Coviam_NLTests.swift */; };
+		572816B62199C742000B3BC9 /* Coviam_NLUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572816B52199C742000B3BC9 /* Coviam_NLUITests.swift */; };
+		572816C42199C79E000B3BC9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572816C32199C79E000B3BC9 /* NetworkManager.swift */; };
+		572816C62199C8CF000B3BC9 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572816C52199C8CF000B3BC9 /* HomePresenter.swift */; };
+		572816C82199C8E9000B3BC9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572816C72199C8E9000B3BC9 /* HomeViewController.swift */; };
+		572816CA2199DCD7000B3BC9 /* EndPointConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572816C92199DCD7000B3BC9 /* EndPointConfiguration.swift */; };
+		572816D52199E2F3000B3BC9 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572816D42199E2F3000B3BC9 /* Logger.swift */; };
+		572816D72199E333000B3BC9 /* HomeScreenAPIEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572816D62199E333000B3BC9 /* HomeScreenAPIEndPoint.swift */; };
+		572816D92199E542000B3BC9 /* CourseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572816D82199E542000B3BC9 /* CourseModel.swift */; };
+		572816DF2199F919000B3BC9 /* HackerNewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572816DE2199F919000B3BC9 /* HackerNewsModel.swift */; };
+		5737B331219BF03300F24F89 /* APIConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5737B330219BF03300F24F89 /* APIConfiguration.plist */; };
+		5737B333219BFD8700F24F89 /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5737B332219BFD8700F24F89 /* APIHelper.swift */; };
+		57DDC2D1219C0549002BD9A4 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DDC2D0219C0549002BD9A4 /* Request.swift */; };
+		57DDC2DE219C3803002BD9A4 /* HomePresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DDC2DC219C3803002BD9A4 /* HomePresenterTest.swift */; };
+		57DDC2DF219C3803002BD9A4 /* NetworkManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DDC2DD219C3803002BD9A4 /* NetworkManagerTest.swift */; };
+		57DDC2E1219C38A8002BD9A4 /* MockConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 57DDC2E0219C38A8002BD9A4 /* MockConfig.plist */; };
+		57DDC2E3219C38B0002BD9A4 /* MockResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 57DDC2E2219C38AF002BD9A4 /* MockResponse.json */; };
+		57DDC2E5219C39C4002BD9A4 /* MockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DDC2E4219C39C4002BD9A4 /* MockModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		572816A72199C742000B3BC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5728168A2199C740000B3BC9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 572816912199C740000B3BC9;
+			remoteInfo = "Coviam-NL";
+		};
+		572816B22199C742000B3BC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5728168A2199C740000B3BC9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 572816912199C740000B3BC9;
+			remoteInfo = "Coviam-NL";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		572816922199C740000B3BC9 /* Coviam-NL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coviam-NL.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		572816952199C740000B3BC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5728169A2199C740000B3BC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5728169C2199C742000B3BC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5728169F2199C742000B3BC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		572816A12199C742000B3BC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		572816A62199C742000B3BC9 /* Coviam-NLTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Coviam-NLTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		572816AA2199C742000B3BC9 /* Coviam_NLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coviam_NLTests.swift; sourceTree = "<group>"; };
+		572816AC2199C742000B3BC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		572816B12199C742000B3BC9 /* Coviam-NLUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Coviam-NLUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		572816B52199C742000B3BC9 /* Coviam_NLUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coviam_NLUITests.swift; sourceTree = "<group>"; };
+		572816B72199C742000B3BC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		572816C32199C79E000B3BC9 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		572816C52199C8CF000B3BC9 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		572816C72199C8E9000B3BC9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		572816C92199DCD7000B3BC9 /* EndPointConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointConfiguration.swift; sourceTree = "<group>"; };
+		572816D42199E2F3000B3BC9 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		572816D62199E333000B3BC9 /* HomeScreenAPIEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenAPIEndPoint.swift; sourceTree = "<group>"; };
+		572816D82199E542000B3BC9 /* CourseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseModel.swift; sourceTree = "<group>"; };
+		572816DE2199F919000B3BC9 /* HackerNewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackerNewsModel.swift; sourceTree = "<group>"; };
+		5737B330219BF03300F24F89 /* APIConfiguration.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APIConfiguration.plist; sourceTree = "<group>"; };
+		5737B332219BFD8700F24F89 /* APIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
+		57DDC2D0219C0549002BD9A4 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		57DDC2DC219C3803002BD9A4 /* HomePresenterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePresenterTest.swift; sourceTree = "<group>"; };
+		57DDC2DD219C3803002BD9A4 /* NetworkManagerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManagerTest.swift; sourceTree = "<group>"; };
+		57DDC2E0219C38A8002BD9A4 /* MockConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MockConfig.plist; sourceTree = "<group>"; };
+		57DDC2E2219C38AF002BD9A4 /* MockResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockResponse.json; sourceTree = "<group>"; };
+		57DDC2E4219C39C4002BD9A4 /* MockModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5728168F2199C740000B3BC9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		572816A32199C742000B3BC9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		572816AE2199C742000B3BC9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		572816892199C740000B3BC9 = {
+			isa = PBXGroup;
+			children = (
+				572816942199C740000B3BC9 /* Coviam-NL */,
+				572816A92199C742000B3BC9 /* Coviam-NLTests */,
+				572816B42199C742000B3BC9 /* Coviam-NLUITests */,
+				572816932199C740000B3BC9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		572816932199C740000B3BC9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				572816922199C740000B3BC9 /* Coviam-NL.app */,
+				572816A62199C742000B3BC9 /* Coviam-NLTests.xctest */,
+				572816B12199C742000B3BC9 /* Coviam-NLUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		572816942199C740000B3BC9 /* Coviam-NL */ = {
+			isa = PBXGroup;
+			children = (
+				572816952199C740000B3BC9 /* AppDelegate.swift */,
+				572816E2219A9E67000B3BC9 /* Presenter */,
+				572816E1219A9E5F000B3BC9 /* View */,
+				572816E0219A9E49000B3BC9 /* Model */,
+				572816C32199C79E000B3BC9 /* NetworkManager.swift */,
+				572816D12199DE5E000B3BC9 /* API Configurations */,
+				572816992199C740000B3BC9 /* Main.storyboard */,
+				5728169C2199C742000B3BC9 /* Assets.xcassets */,
+				5728169E2199C742000B3BC9 /* LaunchScreen.storyboard */,
+				572816A12199C742000B3BC9 /* Info.plist */,
+			);
+			path = "Coviam-NL";
+			sourceTree = "<group>";
+		};
+		572816A92199C742000B3BC9 /* Coviam-NLTests */ = {
+			isa = PBXGroup;
+			children = (
+				57DDC2DC219C3803002BD9A4 /* HomePresenterTest.swift */,
+				57DDC2DD219C3803002BD9A4 /* NetworkManagerTest.swift */,
+				572816AA2199C742000B3BC9 /* Coviam_NLTests.swift */,
+				57DDC2E2219C38AF002BD9A4 /* MockResponse.json */,
+				57DDC2E0219C38A8002BD9A4 /* MockConfig.plist */,
+				572816AC2199C742000B3BC9 /* Info.plist */,
+			);
+			path = "Coviam-NLTests";
+			sourceTree = "<group>";
+		};
+		572816B42199C742000B3BC9 /* Coviam-NLUITests */ = {
+			isa = PBXGroup;
+			children = (
+				572816B52199C742000B3BC9 /* Coviam_NLUITests.swift */,
+				572816B72199C742000B3BC9 /* Info.plist */,
+			);
+			path = "Coviam-NLUITests";
+			sourceTree = "<group>";
+		};
+		572816D12199DE5E000B3BC9 /* API Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				572816E4219A9E99000B3BC9 /* End Point */,
+				57DDC2D0219C0549002BD9A4 /* Request.swift */,
+				572816D42199E2F3000B3BC9 /* Logger.swift */,
+				5737B330219BF03300F24F89 /* APIConfiguration.plist */,
+			);
+			path = "API Configurations";
+			sourceTree = "<group>";
+		};
+		572816E0219A9E49000B3BC9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				57DDC2E4219C39C4002BD9A4 /* MockModel.swift */,
+				572816D82199E542000B3BC9 /* CourseModel.swift */,
+				572816DE2199F919000B3BC9 /* HackerNewsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		572816E1219A9E5F000B3BC9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				572816C72199C8E9000B3BC9 /* HomeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		572816E2219A9E67000B3BC9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				572816C52199C8CF000B3BC9 /* HomePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		572816E4219A9E99000B3BC9 /* End Point */ = {
+			isa = PBXGroup;
+			children = (
+				572816D62199E333000B3BC9 /* HomeScreenAPIEndPoint.swift */,
+				5737B332219BFD8700F24F89 /* APIHelper.swift */,
+				572816C92199DCD7000B3BC9 /* EndPointConfiguration.swift */,
+			);
+			path = "End Point";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		572816912199C740000B3BC9 /* Coviam-NL */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 572816BA2199C742000B3BC9 /* Build configuration list for PBXNativeTarget "Coviam-NL" */;
+			buildPhases = (
+				5728168E2199C740000B3BC9 /* Sources */,
+				5728168F2199C740000B3BC9 /* Frameworks */,
+				572816902199C740000B3BC9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Coviam-NL";
+			productName = "Coviam-NL";
+			productReference = 572816922199C740000B3BC9 /* Coviam-NL.app */;
+			productType = "com.apple.product-type.application";
+		};
+		572816A52199C742000B3BC9 /* Coviam-NLTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 572816BD2199C742000B3BC9 /* Build configuration list for PBXNativeTarget "Coviam-NLTests" */;
+			buildPhases = (
+				572816A22199C742000B3BC9 /* Sources */,
+				572816A32199C742000B3BC9 /* Frameworks */,
+				572816A42199C742000B3BC9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				572816A82199C742000B3BC9 /* PBXTargetDependency */,
+			);
+			name = "Coviam-NLTests";
+			productName = "Coviam-NLTests";
+			productReference = 572816A62199C742000B3BC9 /* Coviam-NLTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		572816B02199C742000B3BC9 /* Coviam-NLUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 572816C02199C742000B3BC9 /* Build configuration list for PBXNativeTarget "Coviam-NLUITests" */;
+			buildPhases = (
+				572816AD2199C742000B3BC9 /* Sources */,
+				572816AE2199C742000B3BC9 /* Frameworks */,
+				572816AF2199C742000B3BC9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				572816B32199C742000B3BC9 /* PBXTargetDependency */,
+			);
+			name = "Coviam-NLUITests";
+			productName = "Coviam-NLUITests";
+			productReference = 572816B12199C742000B3BC9 /* Coviam-NLUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5728168A2199C740000B3BC9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = Coviam;
+				TargetAttributes = {
+					572816912199C740000B3BC9 = {
+						CreatedOnToolsVersion = 9.4;
+					};
+					572816A52199C742000B3BC9 = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = 572816912199C740000B3BC9;
+					};
+					572816B02199C742000B3BC9 = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = 572816912199C740000B3BC9;
+					};
+				};
+			};
+			buildConfigurationList = 5728168D2199C740000B3BC9 /* Build configuration list for PBXProject "Coviam-NL" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 572816892199C740000B3BC9;
+			productRefGroup = 572816932199C740000B3BC9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				572816912199C740000B3BC9 /* Coviam-NL */,
+				572816A52199C742000B3BC9 /* Coviam-NLTests */,
+				572816B02199C742000B3BC9 /* Coviam-NLUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		572816902199C740000B3BC9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				572816A02199C742000B3BC9 /* LaunchScreen.storyboard in Resources */,
+				5728169D2199C742000B3BC9 /* Assets.xcassets in Resources */,
+				5737B331219BF03300F24F89 /* APIConfiguration.plist in Resources */,
+				5728169B2199C740000B3BC9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		572816A42199C742000B3BC9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57DDC2E3219C38B0002BD9A4 /* MockResponse.json in Resources */,
+				57DDC2E1219C38A8002BD9A4 /* MockConfig.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		572816AF2199C742000B3BC9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5728168E2199C740000B3BC9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				572816C42199C79E000B3BC9 /* NetworkManager.swift in Sources */,
+				572816D92199E542000B3BC9 /* CourseModel.swift in Sources */,
+				572816CA2199DCD7000B3BC9 /* EndPointConfiguration.swift in Sources */,
+				572816D72199E333000B3BC9 /* HomeScreenAPIEndPoint.swift in Sources */,
+				572816D52199E2F3000B3BC9 /* Logger.swift in Sources */,
+				572816962199C740000B3BC9 /* AppDelegate.swift in Sources */,
+				572816C62199C8CF000B3BC9 /* HomePresenter.swift in Sources */,
+				5737B333219BFD8700F24F89 /* APIHelper.swift in Sources */,
+				57DDC2D1219C0549002BD9A4 /* Request.swift in Sources */,
+				57DDC2E5219C39C4002BD9A4 /* MockModel.swift in Sources */,
+				572816C82199C8E9000B3BC9 /* HomeViewController.swift in Sources */,
+				572816DF2199F919000B3BC9 /* HackerNewsModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		572816A22199C742000B3BC9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57DDC2DF219C3803002BD9A4 /* NetworkManagerTest.swift in Sources */,
+				572816AB2199C742000B3BC9 /* Coviam_NLTests.swift in Sources */,
+				57DDC2DE219C3803002BD9A4 /* HomePresenterTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		572816AD2199C742000B3BC9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				572816B62199C742000B3BC9 /* Coviam_NLUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		572816A82199C742000B3BC9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 572816912199C740000B3BC9 /* Coviam-NL */;
+			targetProxy = 572816A72199C742000B3BC9 /* PBXContainerItemProxy */;
+		};
+		572816B32199C742000B3BC9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 572816912199C740000B3BC9 /* Coviam-NL */;
+			targetProxy = 572816B22199C742000B3BC9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		572816992199C740000B3BC9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5728169A2199C740000B3BC9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5728169E2199C742000B3BC9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5728169F2199C742000B3BC9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		572816B82199C742000B3BC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		572816B92199C742000B3BC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		572816BB2199C742000B3BC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 454684HMLC;
+				INFOPLIST_FILE = "Coviam-NL/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.coviam.Coviam-NL";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		572816BC2199C742000B3BC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 454684HMLC;
+				INFOPLIST_FILE = "Coviam-NL/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.coviam.Coviam-NL";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		572816BE2199C742000B3BC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 454684HMLC;
+				INFOPLIST_FILE = "Coviam-NLTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.coviam.Coviam-NLTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Coviam-NL.app/Coviam-NL";
+			};
+			name = Debug;
+		};
+		572816BF2199C742000B3BC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 454684HMLC;
+				INFOPLIST_FILE = "Coviam-NLTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.coviam.Coviam-NLTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Coviam-NL.app/Coviam-NL";
+			};
+			name = Release;
+		};
+		572816C12199C742000B3BC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 454684HMLC;
+				INFOPLIST_FILE = "Coviam-NLUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.coviam.Coviam-NLUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Coviam-NL";
+			};
+			name = Debug;
+		};
+		572816C22199C742000B3BC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 454684HMLC;
+				INFOPLIST_FILE = "Coviam-NLUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.coviam.Coviam-NLUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Coviam-NL";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5728168D2199C740000B3BC9 /* Build configuration list for PBXProject "Coviam-NL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				572816B82199C742000B3BC9 /* Debug */,
+				572816B92199C742000B3BC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		572816BA2199C742000B3BC9 /* Build configuration list for PBXNativeTarget "Coviam-NL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				572816BB2199C742000B3BC9 /* Debug */,
+				572816BC2199C742000B3BC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		572816BD2199C742000B3BC9 /* Build configuration list for PBXNativeTarget "Coviam-NLTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				572816BE2199C742000B3BC9 /* Debug */,
+				572816BF2199C742000B3BC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		572816C02199C742000B3BC9 /* Build configuration list for PBXNativeTarget "Coviam-NLUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				572816C12199C742000B3BC9 /* Debug */,
+				572816C22199C742000B3BC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5728168A2199C740000B3BC9 /* Project object */;
+}

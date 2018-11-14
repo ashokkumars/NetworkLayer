@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CoursesEndPoint</key>
+	<string>/jsondecodable/courses</string>
+	<key>CoursesBaseUrl</key>
+	<string>https://api.letsbuildthatapp.com</string>
+	<key>HackerNewsDataEndPoint</key>
+	<string>/v0/item/121003.json</string>
+	<key>HackerNewsDataBaseUrl</key>
+	<string>https://hacker-news.firebaseio.com</string>
+	<key>MockBaseUrl</key>
+	<string>https://httpbin.org/</string>
+	<key>MockEndPoint</key>
+	<string></string>
+	<key>CacheDuration</key>
+	<real>1000</real>
+</dict>
+</plist>
