@@ -17,35 +17,63 @@ protocol HomePresenterDelegate {
 }
 
 class HomePresenter: NSObject {
-
+    
     var delegate: HomePresenterDelegate
-    var networkManager: NetworkManager<API>
     
     var text: String? = nil
     var attributedText: NSMutableAttributedString?
     
+    fileprivate var request: AnyObject?
+    
     init(delegate: HomePresenterDelegate) {
         self.delegate = delegate
-        self.networkManager = NetworkManager()
     }
     
     func getHomeScreenData() {
         
         NotificationCenter.default.addObserver(self, selector: #selector(updateView), name: NSNotification.Name(rawValue: "UpdateView"), object: nil)
         
-        self.networkManager.request(.Courses) { (models: [CourseModel]?, error) in
+        let coursesAPIRequest = Request(endPoint: CourseAPIDetails())
+        request = coursesAPIRequest
+        coursesAPIRequest.request(withCompletion: {(models, error) in
+            print(models ?? "No models retrieved")
+            print(error ?? "Nil error")
+        })
+        
+        let hackerNewsAPIRequest = Request(endPoint: HackerNewsAPIDetails())
+        request = hackerNewsAPIRequest
+        hackerNewsAPIRequest.request {(models, error) in
             print(models ?? "No models retrieved")
             print(error ?? "Nil error")
         }
         
-        self.networkManager.request(.HackerNews, shouldCache: true, cacheDuration: APIHelper.getCacheDuration()) { (model: HackerNewsModel?, error) in
-            print(model ?? "No models retrieved")
+        //perform(#selector(cancelRequests), with: nil, afterDelay: 0.1)
+        
+        //executeMockRequest()
+    }
+    
+    func executeMockRequest() {
+        
+        print("- - -- - - - - -  Executing a Mock Request - - - - - - - - - ")
+        
+        var HNAPIDetails = HackerNewsAPIDetails()
+        HNAPIDetails.mockRequest()
+        
+        let hackerNewsMockAPIRequest = Request(endPoint: HNAPIDetails)
+        request = hackerNewsMockAPIRequest
+        hackerNewsMockAPIRequest.request {(models, error) in
+            print("- - -- - - - - -  Mock Response - - - - - - - - - - ")
+            print(models ?? "No models retrieved")
             print(error ?? "Nil error")
         }
     }
     
-    func cancelRequests() {
-        networkManager.cancelAllRequests()
+    @objc func cancelRequests() {
+        
+        let coursesAPIRequest = Request(endPoint: CourseAPIDetails())
+        coursesAPIRequest.cancel()
+        
+        NetworkManager().cancelAllRequests()
     }
     
     @objc func updateView(notification: Notification) {

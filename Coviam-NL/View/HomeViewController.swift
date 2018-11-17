@@ -20,6 +20,14 @@ class HomeViewController: UIViewController {
         
         homePresenter = HomePresenter(delegate: self)
         homePresenter?.getHomeScreenData()
+        
+        //perform(#selector(createDuplicateRequest), with: nil, afterDelay: 0.1)
+        
+        //perform(#selector(createDuplicateRequest), with: nil, afterDelay: 0.1)
+    }
+    
+    @objc func createDuplicateRequest() {
+        homePresenter?.getHomeScreenData()
     }
 
     override func didReceiveMemoryWarning() {

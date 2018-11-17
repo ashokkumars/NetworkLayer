@@ -8,89 +8,114 @@
 
 import Foundation
 
-/**
- The enum which holds all possible APIs of the Homescreen. Or this can be used to hold all possible APIs of the whole application. This should be confirming to the EndPointConfiguration protocol so as to enable the NetworkManager to make use of it.
- */
-public enum API {
-    /**
-     The Courses API. Which follows the CourseModel
-     - See Also: `CourseModel`
-    */
-    case Courses
+struct CourseAPIDetails: EndPointConfiguration {
     
-    /**
-     The HackerNews API. Which follows the HackerNewsModel
-     - See Also: `HackerNewsModel`
-     */
-    case HackerNews
+    var queue: DispatchQueue = DispatchQueue.global(qos: .userInitiated)
     
-    /**
-     The Mock API. Which follows the MockModel. This is used for the Unit testing purpose
-     - See Also: `MockModel`
-     */
-    case Mock
-}
-
-extension API: EndPointConfiguration {
+    var shouldCacheResponse: Bool = false
+    
+    var cacheDuration: TimeInterval = 0
+    
+    var dispatchDelay: TimeInterval = 0
+    
+    var requestEndPoint: String? = APIHelper.getUrl(pathUrl: "CoursesEndPoint")
+    
+    typealias T = CourseModel
     
     var baseURL: URL {
-        switch self {
-        case .Courses:
-            guard let pathUrl = APIHelper.getUrl(pathUrl: "CoursesBaseUrl"), let url = URL(string: pathUrl) else { fatalError("baseURL could not be configured.")}
-            return url
-        case .HackerNews:
-            guard let pathUrl = APIHelper.getUrl(pathUrl: "HackerNewsDataBaseUrl"), let url = URL(string: pathUrl) else { fatalError("baseURL could not be configured.")}
-            return url
-        case .Mock:
-            guard let pathUrl = APIHelper.getUrl(pathUrl: "MockBaseUrl"), let url = URL(string: pathUrl) else { fatalError("baseURL could not be configured.")}
-            return url
-        }
+        guard let pathUrl = APIHelper.getUrl(pathUrl: "CoursesBaseUrl"), let url = URL(string: pathUrl) else { fatalError("baseURL could not be configured.")}
+        return url
     }
     
     var path: String {
-        switch self {
-        case .HackerNews:
-            guard let pathUrl = APIHelper.getUrl(pathUrl: "HackerNewsDataEndPoint") else { return ""}
-            return pathUrl
-        case .Courses:
-            guard let pathUrl = APIHelper.getUrl(pathUrl: "CoursesEndPoint") else { return ""}
-            return pathUrl
-        case .Mock:
-            guard let pathUrl = APIHelper.getUrl(pathUrl: "MockEndPoint") else { return ""}
-            return pathUrl
+        get {
+            return requestEndPoint ?? ""
+        }
+        set {
+            guard let pathUrl = APIHelper.getUrl(pathUrl: "CoursesEndPoint")
+                else {
+                    return
+            }
+            requestEndPoint = pathUrl + newValue
         }
     }
     
     var httpMethod: HTTPMethod {
-        switch self {
-        case .Courses:
-            return .get
-        case .HackerNews:
-            return .get
-        case .Mock:
-            return .get
-        }
+        return .get
     }
     
     var task: DataTask {
-        switch self {
-        case .Courses:
-            return .requestParameters(bodyParameters: nil,
-                                      bodyEncoding: .urlEncoding,
-                                      urlParameters: nil)
-        case .HackerNews:
-            return .requestParameters(bodyParameters: nil,
-                                      bodyEncoding: .urlEncoding,
-                                      urlParameters: ["print":"pretty"])
-        case .Mock:
-            return .requestParameters(bodyParameters: nil,
-                                      bodyEncoding: .urlEncoding,
-                                      urlParameters: nil)
-        }
+        return .requestParameters(bodyParameters: nil,
+                                  bodyEncoding: .urlEncoding,
+                                  urlParameters: nil)
     }
     
     var headers: HTTPHeaders? {
         return nil
+    }
+}
+
+
+struct HackerNewsAPIDetails: EndPointConfiguration {
+    
+    var queue: DispatchQueue = DispatchQueue.global(qos: .userInitiated)
+    
+    var shouldCacheResponse: Bool = false
+    
+    var cacheDuration: TimeInterval = 0
+    
+    var dispatchDelay: TimeInterval = 0
+    
+    typealias T = HackerNewsModel
+    
+    var requestEndPoint: String? = APIHelper.getUrl(pathUrl: "HackerNewsDataEndPoint")
+    
+    var baseURL: URL {
+        guard let pathUrl = APIHelper.getUrl(pathUrl: "HackerNewsDataBaseUrl"), let url = URL(string: pathUrl) else { fatalError("baseURL could not be configured.")}
+        return url
+    }
+    
+    var path: String {
+        get {
+            return requestEndPoint ?? ""
+        }
+        set {
+            guard let pathUrl = APIHelper.getUrl(pathUrl: "HackerNewsDataEndPoint")
+                else {
+                    return
+            }
+            requestEndPoint = pathUrl + newValue
+        }
+    }
+    
+    var httpMethod: HTTPMethod {
+        return .get
+    }
+    
+    var task: DataTask {
+        return .requestParameters(bodyParameters: nil,
+                                  bodyEncoding: .urlEncoding,
+                                  urlParameters: ["print":"pretty"])
+    }
+    
+    var headers: HTTPHeaders? {
+        return nil
+    }
+    
+    func getModel(from data: Data?) -> (models: [T]?, error: String?) {
+
+        guard let responseData = data else {
+            Logger.log(error: nil, errorMessage: ResponseMessages.noData.rawValue)
+            return(nil, ResponseMessages.noData.rawValue)
+        }
+        do {
+            let models = try JSONDecoder().decode(HackerNewsModel.self, from: responseData)
+            return ([models], nil)
+            
+        } catch {
+            Logger.log(error: error, errorMessage: ResponseMessages.unableToDecode.rawValue)
+            return(nil, ResponseMessages.unableToDecode.rawValue)
+        }
     }
 }
 

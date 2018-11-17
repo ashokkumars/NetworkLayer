@@ -9,6 +9,39 @@
 import UIKit
 
 /**
+ The possible response errors and its corresponding messages. Also use this enum for localizaing the messages shown to the user
+ */
+enum ResponseMessages:String, Error {
+    case success
+    case authenticationError = "Authentication error. Unauthorized user access"
+    case badRequest = "Bad request"
+    case serverError = "Internal Server error"
+    case outdated = "The url you requested is outdated."
+    case failed = "Failed network request"
+    case noData = "No response data to decode"
+    case unableToDecode = "Unable to decode the response."
+    case parametersNil = "Parameters were nil."
+    case encodingFailed = "Parameter encoding failed."
+    case missingURL = "URL is nil."
+}
+
+/**
+ The Result enum. Which is used to inform the parser that the API response is successful or not.
+ */
+enum Result<String> {
+    
+    /// If the response is successful, the parser will return the Result enum with success case. (Status codes 200 to 299)
+    case success
+    
+    /** The failed response will have the failure case with an associated message. This message can be used to update the user about the actual error
+     
+     - See Also: `ResponseMessages`
+     */
+    case failure(String)
+}
+
+
+/**
  The helper class which is used to support the NetworkManager or any other Requst related classes
  */
 class APIHelper: NSObject {

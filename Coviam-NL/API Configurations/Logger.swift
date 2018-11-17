@@ -61,8 +61,8 @@ class Logger: NSObject {
     
     static func updateViewAndPrint(_ message: String) {
         
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "UpdateView"), object: nil, userInfo: ["message": message])
-        //print(message)
+        //NotificationCenter.default.post(name: NSNotification.Name(rawValue: "UpdateView"), object: nil, userInfo: ["message": message])
+        print(message)
     }
 }
 

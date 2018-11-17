@@ -12,6 +12,7 @@ import Foundation
 
 class NetworkManagerTest: XCTestCase {
     
+    /*
     var networkManager: NetworkManager<API> {
         return NetworkManager()
     }
@@ -50,20 +51,21 @@ class NetworkManagerTest: XCTestCase {
             XCTAssert(true)
         }
     }
+    */
+    
+    func testSuccessfulResponse() {
+        
+        var courseAPIDetails = CourseAPIDetails()
+        courseAPIDetails.mockRequest()
+        
+        let coursesAPIRequest = Request(endPoint: courseAPIDetails, session: .shared)
+
+        coursesAPIRequest.request { (models, error) in
+            print(models ?? "No models retrieved")
+            print(error ?? "No error reported")
+        }
+    }
+    
+    
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -23,6 +23,7 @@
 		572816DF2199F919000B3BC9 /* HackerNewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572816DE2199F919000B3BC9 /* HackerNewsModel.swift */; };
 		5737B331219BF03300F24F89 /* APIConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5737B330219BF03300F24F89 /* APIConfiguration.plist */; };
 		5737B333219BFD8700F24F89 /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5737B332219BFD8700F24F89 /* APIHelper.swift */; };
+		57A1F48E219F325C00689B94 /* MockResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 57DDC2E2219C38AF002BD9A4 /* MockResponse.json */; };
 		57DDC2D1219C0549002BD9A4 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DDC2D0219C0549002BD9A4 /* Request.swift */; };
 		57DDC2DE219C3803002BD9A4 /* HomePresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DDC2DC219C3803002BD9A4 /* HomePresenterTest.swift */; };
 		57DDC2DF219C3803002BD9A4 /* NetworkManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DDC2DD219C3803002BD9A4 /* NetworkManagerTest.swift */; };
@@ -315,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				572816A02199C742000B3BC9 /* LaunchScreen.storyboard in Resources */,
+				57A1F48E219F325C00689B94 /* MockResponse.json in Resources */,
 				5728169D2199C742000B3BC9 /* Assets.xcassets in Resources */,
 				5737B331219BF03300F24F89 /* APIConfiguration.plist in Resources */,
 				5728169B2199C740000B3BC9 /* Main.storyboard in Resources */,

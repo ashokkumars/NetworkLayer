@@ -1,30 +1,12 @@
-[
- {
- "id": 1,
- "name": "Instagram Firebase",
- "link": "https://www.letsbuildthatapp.com/course/instagram-firebase",
- "imageUrl": "https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/04782e30-d72a-4917-9d7a-c862226e0a93",
- "number_of_lessons": 49
- },
- {
- "id": 2,
- "name": "Podcasts Course",
- "link": "https://www.letsbuildthatapp.com/course/podcasts",
- "imageUrl": "https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/32f98d9d-5b9b-4a22-a012-6b87fd7158c2",
- "number_of_lessons": 39
- },
- {
- "id": 3,
- "name": "Intermediate Training Core Data",
- "link": "https://www.letsbuildthatapp.com/course/intermediate-training-core-data",
- "imageUrl": "https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/0736fecb-5b88-483b-a83d-ca2a5a6d93f9",
- "number_of_lessons": 32
- },
- {
- "id": 4,
- "name": "Kindle Basic Training",
- "link": "https://www.letsbuildthatapp.com/basic-training",
- "imageUrl": "https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/a6180731-c077-46e7-88d5-4900514e06cf",
- "number_of_lessons": 19
- }
- ]
+{
+    "by" : "tel",
+    "descendants" : 16,
+    "id" : 121003,
+    "kids" : [ 121016, 121109, 121168 ],
+    "score" : 25,
+    "text" : "<i>or</i> HN: the Next Iteration<p>I get the impression that with Arc being released a lot of people who never had time for HN before are suddenly dropping in more often. (PG: what are the numbers on this? I'm envisioning a spike.)<p>Not to say that isn't great, but I'm wary of Diggification. Between links comparing programming to sex and a flurry of gratuitous, ostentatious  adjectives in the headlines it's a bit concerning.<p>80% of the stuff that makes the front page is still pretty awesome, but what's in place to keep the signal/noise ratio high? Does the HN model still work as the community scales? What's in store for (++ HN)?",
+    "time" : 1203647620,
+    "title" : "Ask HN: The Arc Effect",
+    "type" : "story",
+    "url" : ""
+}
