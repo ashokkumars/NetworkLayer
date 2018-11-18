@@ -33,6 +33,7 @@ extension Request: RequestProtocol, ResponseProtocol {
             if let response = response as? HTTPURLResponse {
                 
                 if self.isUnauthorizedUser(response) {
+                //if true {
                 
                     self.resolveAuthenticationChallenge(with: hackerNewsAPIRequest.endPoint.urlRequest, for: self.endPoint.urlRequest, shouldCache: self.endPoint.shouldCacheResponse, cacheDuration: self.endPoint.cacheDuration, queue: self.endPoint.queue, dispatchAfter: self.endPoint.dispatchDelay, completion: completion)
                     
@@ -47,7 +48,7 @@ extension Request: RequestProtocol, ResponseProtocol {
     }
     
     internal func requestData(withCompletion completion: @escaping (Data?, URLResponse?, Error?) -> Void) {
-        requestData_(endPoint.urlRequest, shouldCache: endPoint.shouldCacheResponse, cacheDuration: endPoint.cacheDuration, queue: endPoint.queue, dispatchAfter: endPoint.dispatchDelay, withCompletion: completion)
+        requestData(endPoint.urlRequest, shouldCache: endPoint.shouldCacheResponse, cacheDuration: endPoint.cacheDuration, queue: endPoint.queue, dispatchAfter: endPoint.dispatchDelay, withCompletion: completion)
     }
     
     fileprivate func resolveAuthenticationChallenge(with urlRequest: URLRequest, for backupRequest: URLRequest, shouldCache: Bool, cacheDuration: TimeInterval, queue: DispatchQueue, dispatchAfter: TimeInterval, completion: @escaping ([EndPoint.T]?, String?) -> Void) {
@@ -123,9 +124,9 @@ protocol RequestProtocol {
     func cancel()
 }
 
-extension RequestProtocol where Self : ResponseProtocol {
+extension RequestProtocol {
 
-    func requestData_(_ urlRequest: URLRequest, shouldCache: Bool, cacheDuration: TimeInterval, queue: DispatchQueue, dispatchAfter: TimeInterval, withCompletion completion: @escaping (_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void) {
+    func requestData(_ urlRequest: URLRequest, shouldCache: Bool, cacheDuration: TimeInterval, queue: DispatchQueue, dispatchAfter: TimeInterval, withCompletion completion: @escaping (_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void) {
         
         if isMockRequest(request: urlRequest), let mockData = getMockResponse(for : urlRequest).data {
             Logger.log(message: "- - - - - - - - - -  Returning Mock Response for the request - \(urlRequest.url?.absoluteString ?? "") - - - - - - - - - -\n")
@@ -174,26 +175,20 @@ extension RequestProtocol where Self : ResponseProtocol {
             
             let task = URLSession.shared.dataTask(with: urlRequest, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) -> Void in
                 
-                if error != nil {
-                    Logger.log(error: error, errorMessage: nil)
-                    completion(nil, nil, error)
-                    return
-                }
-                
                 if let response = response as? HTTPURLResponse {
-                    let result = self.handleNetworkResponse(response)
-                    switch result {
-                    case .success:
-                        Logger.log(response: response)
+                    switch response.statusCode {
+                    case 200...299:
+                        Logger.log(message: " - - - - - - - - - - \(#function) Reauthentication successful. Triggering the previous request again  - - - - - - - - - - ")
                         
                         //Update the header to have the new access token before proceeding with the request
                         self.loadData(with: backupRequest, shouldCache: shouldCache, cacheDuration: cacheDuration, queue: queue, dispatchAfter: dispatchAfter, completion: completion)
-                        
-                    case .failure(let networkFailureError):
-                        Logger.log(error: error, errorMessage: networkFailureError)
-                        completion(nil, nil, error)
+                        return
+                    default:
+                        break
                     }
                 }
+                
+                completion(nil, nil, error)
             })
             
             task.taskDescription = urlRequest.url?.absoluteString
@@ -326,6 +321,8 @@ protocol ResponseProtocol: class {
     func convertResponseToModel(_ data: Data?) -> (models: [R]?, error: String?)
     
     func parseResponse(_ data: Data?, _ response: URLResponse?, _ error: Error?) -> (models: [R]?, error: String?)
+    
+    func cacheResponseIfNeeded(_ response: URLResponse?, _ data: Data?, _ request: URLRequest, _ shouldCache: Bool, _ cacheDuration: TimeInterval)
 }
 
 extension ResponseProtocol {
